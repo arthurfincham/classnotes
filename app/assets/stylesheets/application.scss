@@ -13,5 +13,23 @@
  *= require_tree .
  *= require_self
  */
+ // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(224, 224, 224);
+}
+
+.sign-in-box{
+  width: 30vw;
+  max-width: 300px;
+  text-align: center;
+}
+.custom-control-input{  
+  font-size: 40px;
+}
