@@ -17,14 +17,6 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-body{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(224, 224, 224);
-}
-
 .sign-in-box{
   width: 30vw;
   max-width: 300px;
@@ -32,4 +24,19 @@ body{
 }
 .custom-control-input{  
   font-size: 40px;
+}
+
+.sign-in-wrapper{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  width: 100vw;
+}
+
+.mt-2{
+  padding-top: 15px;
 }
