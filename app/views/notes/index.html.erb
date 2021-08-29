@@ -1,0 +1,17 @@
+<h1>Listing all Notes</h1>
+<table>
+ <tr>
+  <th>Date</th>
+  <th>Title</th>
+  <th>Instructor</th>
+  <th>Description</th>
+ </tr>
+ <% @notes.each do |note| %>
+ <tr>
+  <td><%= note.date %></td>
+  <td><%= note.title %></td>
+  <td><%= note.instructor %></td>
+  <td><%= note.description %></td>
+ </tr>
+ <% end %>
+</table>
