@@ -8,6 +8,7 @@
           <div class="d-flex flex-column"> <span class="articles"><%= @current_user.email %></span>
           <div class="d-flex flex-column"> <span class="articles">Belt: <%= @current_user.belt %></span>
           <div class="d-flex flex-column"> <span class="articles">Training since: <%= @current_user.training_since.to_formatted_s(:long) %></span>
+          <div class="d-flex flex-column"> <span class="articles">Notes: <%= @current_user.notes.count %></span>
         </div>
         </div>
       </div>
