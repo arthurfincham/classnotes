@@ -1,13 +1,15 @@
 <h1>Listing all Notes</h1>
 <table>
  <tr>
+  <th>User</th>
   <th>Date</th>
   <th>Title</th>
   <th>Instructor</th>
   <th>Description</th>
  </tr>
- <% @notes.each do |note| %>
+ <% @user_notes.each do |note| %>
  <tr>
+  <td><%= note.user_id %></td>
   <td><%= note.date %></td>
   <td><%= note.title %></td>
   <td><%= note.instructor %></td>

@@ -2,6 +2,7 @@ class NotesController < ApplicationController
 
   def index
     @notes = Note.all
+    @user_notes = current_user.notes.all
   end
 
   def new
@@ -11,7 +12,7 @@ class NotesController < ApplicationController
   def create
    # render plain: params[:note].inspect\
    @note = Note.new(note_params)
-   @note.user = User.first
+   @note.user = current_user
    if @note.save
     flash[:notice] = "Note was successfully created"
     redirect_to notes_path
