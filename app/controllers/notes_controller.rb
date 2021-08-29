@@ -21,6 +21,25 @@ class NotesController < ApplicationController
    end 
   end
 
+  def edit
+    @note = Note.find(params[:id])
+  end
+
+  def update
+    @note = Note.find(params[:id])
+    if @note.update(note_params)
+     flash[:notice] = "Note was updated"
+     redirect_to note_path(@note)
+    else
+     flash[:notice] = "Note was not updated"
+     render 'edit'
+    end
+  end
+
+  def show
+    @note = Note.find(params[:id])
+  end
+
   private
     def note_params
      params.require(:note).permit(:user_id, :title, :date, :instructor, :description)
