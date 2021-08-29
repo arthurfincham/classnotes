@@ -17,6 +17,10 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+h1{
+  font-family: league-gothic, sans-serif;
+  font-style: italic;
+}
 .sign-in-box{
   width: 30vw;
   max-width: 300px;
@@ -29,6 +33,7 @@
 .sign-in-wrapper{
   height: 90vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -39,4 +44,17 @@
 
 .mt-2{
   padding-top: 15px;
+}
+
+.navbar{
+  font-size: 12px;
+}
+
+.note-show-container{
+  display: flex;
+  justify-content: center;
+}
+
+.note-show-box{
+  width: 90vw;
 }
