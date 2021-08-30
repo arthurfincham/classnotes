@@ -1,0 +1,40 @@
+<div class="note-show-container">
+  <div class="note-show-box">
+    <% if request.path.include? "edit" %>
+      <h1>Edit Note</h1>
+    <% else %>
+      <h1>New Note</h1>
+    <% end %>
+
+    <%= form_for @note do |f| %>
+    <table class="table">
+      <thead>
+        <tr>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><%= f.label :title %></th>
+          <td><%= f.text_field :title %></td>
+        </tr>
+        <tr>
+          <th scope="row"><%= f.label :date %></th>
+          <td><%= f.date_field :date %></td>
+        </tr>
+        <tr>
+          <th scope="row"><%= f.label :instructor %></th>
+          <td><%= f.text_field :instructor %></td>
+        </tr>
+        <tr>
+          <th scope="row"><%= f.label :description %></th>
+          <td><%= f.text_field :description %></td>
+        </tr>
+      </tbody>
+    </table>
+     <div class="sign-up-bottom-buttons">
+    <div class="mt-2">
+      <%= f.submit "Submit", class: "w-25 btn btn-primary btn-lg" %>
+    </div>
+    </div>
+    <% end %>
