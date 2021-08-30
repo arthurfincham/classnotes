@@ -81,14 +81,22 @@ h1{
 }
 
 .note-show-box{
-  width: 40vw;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
 }
 
-.note-show-box th {
+.note-edit-box{
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.note-edit-box th {
   text-align: right;
 }
 
