@@ -1,9 +1,9 @@
 <div class="note-show-container">
   <div class="note-edit-box">
     <% if request.path.include? "edit" %>
-      <h1>Edit Note</h1>
+      <h1 class="animate__animated animate__headShake">Edit Note</h1>
     <% else %>
-      <h1>New Note</h1>
+      <h1 class="animate__animated animate__headShake">New Note</h1>
     <% end %>
 
     <%= form_for @note do |f| %>
@@ -37,4 +37,5 @@
       <%= f.submit "Submit", class: "w-25 btn btn-primary btn-lg" %>
     </div>
     </div>
+
     <% end %>

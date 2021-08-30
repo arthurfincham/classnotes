@@ -26,7 +26,6 @@
           <i class="bi bi-person-lines-fill"></i>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to 'Profile', user_path(current_user), method: :get, class: 'dropdown-item' %>
           <%= link_to 'Edit your profile', edit_user_registration_path(current_user), method: :get, class: 'dropdown-item' %>
           <div class="dropdown-divider"></div>
           <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
