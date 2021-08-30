@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def new
     @new_user = User.new
   end
@@ -8,8 +7,6 @@ class UsersController < ApplicationController
     @current_user = current_user
   end 
 
-  def edit
-    @user = User.find(params[:id])
-  end 
-  
+
+
 end
