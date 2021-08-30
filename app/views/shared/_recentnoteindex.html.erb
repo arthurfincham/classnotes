@@ -1,0 +1,23 @@
+<div class="note-show-container">
+<div class="note-show-box">
+<h1>All Notes</h1>
+<table class="table table-hover">
+  <tr>
+    <th><%= link_to "Date", :sort => "date DESC" %></th>
+    <th><%= link_to "Title", :sort => "LOWER(title)" %></th>
+    <th><%= link_to "Instructor", :sort => "LOWER(instructor)" %></th>
+    <th>Description</th>
+  </tr>
+  <% @recent_notes.each do |note| %>
+  <tr>
+    <td><%= note.date.to_formatted_s(:long) %></td>
+    <td><%= note.title %></td>
+    <td><%= note.instructor %></td>
+    <td><%= note.description %></td>
+    <td><%= link_to 'Show', note_path(note), class: "btn btn-sm btn-outline-dark" %></td>
+    <td><%= link_to 'Edit', edit_note_path(note), class: "btn btn-sm btn-outline-dark" %></td>
+  </tr>
+  <% end %>
+</table>
+</div>
+</div>
