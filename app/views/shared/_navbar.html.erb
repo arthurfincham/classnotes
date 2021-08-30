@@ -2,7 +2,8 @@
   <a class="navbar-brand" href="#">
     <%= image_tag "cn_logo.png", height: "50px" %>
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -11,17 +12,18 @@
       <% if user_signed_in? %>
       <li class="nav-item active">
         <%= link_to notes_path, method: :get, class: 'nav-link' do %>
-          <i class="bi bi-journal-text" title="All Notes"></i>
+        <i class="bi bi-journal-text" title="All Notes"></i>
         <% end %>
       </li>
       <li class="nav-item">
         <%= link_to new_note_path, method: :get, class: 'nav-link' do %>
-          <i class="bi bi-pen" title="New Note"></i>
+        <i class="bi bi-pen" title="New Note"></i>
         <% end %>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="bi bi-person-circle"></i>
+        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <i class="bi bi-person-lines-fill"></i>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to 'Profile', user_path(current_user), method: :get, class: 'dropdown-item' %>
