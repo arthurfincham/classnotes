@@ -17,6 +17,13 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
 .btn{
   font-size: 0.8em !important;
 }
@@ -66,13 +73,21 @@ h1{
   font-size: 12px;
 }
 
+// TODO: 
+
 .note-show-container{
   display: flex;
   justify-content: center;
+  background-color: green;
 }
 
 .note-show-box{
-  width: 90vw;
+  width: auto;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
 }
 
 .card {
