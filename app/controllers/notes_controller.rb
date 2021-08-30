@@ -2,7 +2,7 @@ class NotesController < ApplicationController
 
   def index
     @notes = Note.all
-    @user_notes = current_user.notes.all
+    @user_notes = Note.order(params[:sort])
   end
 
   def new

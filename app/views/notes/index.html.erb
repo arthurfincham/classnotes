@@ -3,9 +3,9 @@
 <h1>All Notes</h1>
 <table class="table table-hover">
   <tr>
-    <th>Date</th>
-    <th>Title</th>
-    <th>Instructor</th>
+    <th><%= link_to "Date", :sort => "date" %></th>
+    <th><%= link_to "Title", :sort => "LOWER(title)" %></th>
+    <th><%= link_to "Instructor", :sort => "LOWER(instructor)" %></th>
     <th>Description</th>
   </tr>
   <% @user_notes.each do |note| %>
