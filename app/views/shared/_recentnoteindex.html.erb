@@ -1,11 +1,11 @@
 <div class="note-show-container">
 <div class="note-show-box">
-<h1>All Notes</h1>
+<h3>Recent Notes</h3>
 <table class="table table-hover">
   <tr>
-    <th><%= link_to "Date", :sort => "date DESC" %></th>
-    <th><%= link_to "Title", :sort => "LOWER(title)" %></th>
-    <th><%= link_to "Instructor", :sort => "LOWER(instructor)" %></th>
+    <th>Date</th>
+    <th>Title</th>
+    <th>Instructor</th>
     <th>Description</th>
   </tr>
   <% @recent_notes.each do |note| %>
