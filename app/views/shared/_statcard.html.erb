@@ -1,0 +1,22 @@
+<div class="animate__animated animate__bounceInRight stat-card-custom">
+  <h1><%= "Welcome #{current_user.name}" %></h1>
+  <div class="note-show-container">
+    <div class="note-show-box">
+      <h3>Stats</h3>
+      <table class="table table-hover">
+        <tr>
+          <td>Belt: </td>
+          <td><%= @current_user.belt %></td>
+        </tr>
+        <tr>
+          <td>Training since: </td>
+          <td><%= @current_user.training_since.to_formatted_s(:long) %></td>
+        </tr>
+        <tr>
+          <td>Notes: </td>
+          <td><%= @current_user.notes.count %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
