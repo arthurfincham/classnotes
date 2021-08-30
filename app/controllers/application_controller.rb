@@ -5,5 +5,10 @@ class ApplicationController < ActionController::Base
 
   def new
     @new_user = User.new
+  end
+
+  def edit
+    @user = User.find(params[:id])
   end 
+  
 end
