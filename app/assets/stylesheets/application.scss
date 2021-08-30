@@ -158,3 +158,11 @@ h3{
 .sort-arrows{
   font-size: 0.8em;
 }
+
+.stat-card-custom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: auto;
+}
