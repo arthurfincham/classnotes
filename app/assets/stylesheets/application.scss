@@ -161,13 +161,7 @@ h3{
   font-size: 0.8em;
 }
 
-.stat-card-custom{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: auto;
-}
+
 
 .alert-error {
   background-color: #f2dede;
@@ -211,4 +205,54 @@ h3{
 
 th > a{
   color: black !important;
+}
+
+.note-preview-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 350px;
+  width: auto;
+}
+
+.note-preview-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 350px;
+  width: auto;
+}
+
+.note-preview-box-style{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.description-field{
+  min-height: 100px;
+  min-width: 350px;
+  width: auto;
+}
+
+.stat-card-custom{
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  min-width: 350px;
+  width: auto;
+}
+
+input:focus {
+  outline: none !important;
+  background-color: rgb(216, 216, 216);
+}
+
+.description-field:focus{
+  outline: none !important;
+  background-color: rgb(216, 216, 216);
 }
