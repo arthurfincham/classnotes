@@ -1,0 +1,13 @@
+<h1><%= "Welcome #{current_user.name}" %></h1>
+  <div>
+    <div class="home-buttons">
+      <%= link_to notes_path, method: :get, class: 'nav-link home-nav-link' do %>
+      <i class="bi bi-journal-text" title="All Notes"></i>
+      <p>All Notes</p>
+      <% end %>
+      <%= link_to new_note_path, method: :get, class: 'nav-link home-nav-link' do %>
+      <i class="bi bi-pen" title="New Note"></i>
+      <p>New Note</p>
+      <% end %>
+    </div>
+  </div>

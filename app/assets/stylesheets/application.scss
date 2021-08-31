@@ -41,6 +41,11 @@ h1{
   font-size: 5em !important;
 }
 
+h2{
+  font-family: league-gothic, sans-serif;
+  font-size: 4em !important;
+}
+
 h3{
   font-family: league-gothic, sans-serif;
   font-style: italic;
@@ -256,3 +261,16 @@ input:focus {
   outline: none !important;
   background-color: rgb(216, 216, 216);
 }
+
+#note_date{
+  font-family: league-gothic, sans-serif;
+  font-size: 5em !important;
+  display: flex;
+  flex-direction: row;
+}
+
+.bi-eye{
+  color: black !important;
+  padding: 0px;
+}
+

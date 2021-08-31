@@ -1,6 +1,7 @@
 <div class="note-show-container">
 <div class="note-show-box">
-<h1>All Notes</h1>
+  <% if request.path.include? 'notes' %>
+  <h1>All Notes</h1>
 <table class="table table-hover">
   <tr>
     <th><%= link_to "Date", :sort => "date DESC" %><i class="bi bi-arrow-down-up sort-arrows"></i></th>
@@ -8,14 +9,26 @@
     <th><%= link_to "Instructor", :sort => "LOWER(instructor)" %><i class="bi bi-arrow-down-up sort-arrows"></i></th>
     <th>Description</th>
   </tr>
-  <% @user_notes.each do |note| %>
+    
+  <% else %>
+  <h3>Recent Notes</h3>
+    <table class="table table-hover">
+      <tr>
+        <th>Date</th>
+        <th>Title</th>
+        <th>Instructor</th>
+        <th>Description</th>
+      </tr>
+  <% end %>
+    <% @user_notes.each do |note| %>
   <tr>
     <td><%= note.date.to_formatted_s(:long) %></td>
     <td><%= note.title %></td>
     <td><%= note.instructor %></td>
     <td><%=  truncate(note.description, :length => 50, :separator => '') %></td>
-    <td><%= link_to 'Show', note_path(note), class: "btn btn-sm btn-outline-dark" %></td>
-    <td><%= link_to 'Edit', edit_note_path(note), class: "btn btn-sm btn-outline-dark" %></td>
+    <td><%= link_to edit_note_url(note), method: :get do %>
+        <i class="bi bi-eye" title="All Notes"></i>
+        <% end %></td>
   </tr>
   <% end %>
 </table>
