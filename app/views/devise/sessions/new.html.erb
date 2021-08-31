@@ -1,7 +1,8 @@
-<div class="sign-in-wrapper animate__animated animate__flipInX">
+<div class="sign-in-wrapper">
 
 <%= image_tag "cn_logo.png", height: "200px" %>
   <div class="sign-in-box">
+
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-signin"}) do |f| %>
 
@@ -23,6 +24,5 @@
     </div>
     <% end %>
     <p class="mt-5 mb-3 text-muted">© 2021</p>
-
   </div>
 </div>
