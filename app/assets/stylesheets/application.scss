@@ -51,6 +51,7 @@ h3{
   font-style: italic;
   font-size: 3em !important;
 }
+
 .sign-in-box{
   width: 30vw;
   max-width: 300px;
@@ -61,7 +62,6 @@ h3{
   width: 40vw;
   max-width: 350px;
 }
-
 
 .custom-control-input{  
   font-size: 40px;
@@ -77,38 +77,21 @@ h3{
 
 .navbar {
   width: 100vw;
+  font-size: 12px;
 }
 
 .mt-2{
   padding-top: 15px;
 }
 
-.navbar{
-  font-size: 12px;
-}
-
-// TODO: 
-
-.note-show-container{
+.note-show-container, .note-show-box, .note-edit-box{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.note-show-box{
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-}
-
-.note-edit-box{
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.note-show-box, .note-edit-box{
   align-items: left;
 }
 
@@ -133,7 +116,6 @@ h3{
   line-height: 20px;
   margin-top: 14px;
 }
-
 
 .sign-up-bottom-buttons{
   text-align: center;
@@ -165,8 +147,6 @@ h3{
 .sort-arrows{
   font-size: 0.8em;
 }
-
-
 
 .alert-error {
   background-color: #f2dede;
@@ -212,16 +192,7 @@ th > a{
   color: black !important;
 }
 
-.note-preview-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-width: 350px;
-  width: auto;
-}
-
-.note-preview-box{
+.note-preview-container, .note-preview-box, .note-preview-box-style{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -231,10 +202,6 @@ th > a{
 }
 
 .note-preview-box-style{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   border: none;
 }
 
@@ -252,12 +219,7 @@ th > a{
   width: auto;
 }
 
-input:focus {
-  outline: none !important;
-  background-color: rgb(216, 216, 216);
-}
-
-.description-field:focus{
+input:focus, .description-field:focus {
   outline: none !important;
   background-color: rgb(216, 216, 216);
 }
@@ -274,3 +236,7 @@ input:focus {
   padding: 0px;
 }
 
+.log-in-bold{
+  font-style: bold !important;
+  margin-bottom: 10px !important;
+}
