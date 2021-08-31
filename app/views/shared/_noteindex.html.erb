@@ -13,7 +13,7 @@
     <td><%= note.date.to_formatted_s(:long) %></td>
     <td><%= note.title %></td>
     <td><%= note.instructor %></td>
-    <td><%= note.description %></td>
+    <td><%=  truncate(note.description, :length => 50, :separator => '') %></td>
     <td><%= link_to 'Show', note_path(note), class: "btn btn-sm btn-outline-dark" %></td>
     <td><%= link_to 'Edit', edit_note_path(note), class: "btn btn-sm btn-outline-dark" %></td>
   </tr>
