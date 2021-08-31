@@ -86,7 +86,9 @@ h3{
 
 .note-show-container{
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .note-show-box{
@@ -193,4 +195,20 @@ h3{
   border-color: #d6e9c6;
   color: #468847;
   text-align: left;
+}
+
+.home-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  font-size: 1em;
+}
+
+.home-nav-link{
+  color: black !important;
+}
+
+th > a{
+  color: black !important;
 }
