@@ -5,7 +5,7 @@
     <% else %>
       <h1 class="animate__animated animate__headShake">New Note</h1>
     <% end %>
-
+    <%= render "shared/errornotes" %>
     <%= form_for @note do |f| %>
     <table class="table">
       <thead>
