@@ -1,9 +1,10 @@
 <div class="sign-in-wrapper">
+<%= image_tag "cn_logo.png", height: "200px" %>
   <div class="sign-up-box">
-    <h2>Sign up</h2>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="field form-input">
       <% f.label :name %><br />
@@ -16,7 +17,7 @@
     </div>
 
     <div class="field form-input training-since-custom">
-      <%= f.label :training_since %><br>
+      <%= f.label :training_since %>
       <%= f.date_field :training_since %>
     </div>
 

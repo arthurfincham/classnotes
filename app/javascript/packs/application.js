@@ -14,3 +14,5 @@ Turbolinks.start()
 ActiveStorage.start()
 
 document.documentElement.style.setProperty('--animate-duration', '.8s');
+
+
