@@ -125,15 +125,6 @@ h3{
   padding-top: 10px;
 }
 
-.bi{
-  font-size: 20px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.bi-person-lines-fill{
-  font-size: 25px !important;
-}
 
 .navbar-nav{
   align-items: center;
@@ -145,7 +136,7 @@ h3{
 }
 
 .sort-arrows{
-  font-size: 0.8em;
+  font-size: 0.8em !important;
 }
 
 .alert-error {
@@ -231,12 +222,32 @@ input:focus, .description-field:focus {
   flex-direction: row;
 }
 
-.bi-eye{
+.bi-eye, .bi-trash{
   color: black !important;
   padding: 0px;
 }
 
+.bi-trash{
+  font-size: 15px !important;
+}
+
+.bi{
+  font-size: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.bi-person-lines-fill{
+  font-size: 25px !important;
+}
+
+
+
 .log-in-bold{
   font-style: bold !important;
   margin-bottom: 10px !important;
+}
+
+td, th{
+  vertical-align: middle !important;
 }
