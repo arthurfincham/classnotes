@@ -9,6 +9,8 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "animate.css"
 
+require("jquery")
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
