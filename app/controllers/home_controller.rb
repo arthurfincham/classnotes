@@ -7,6 +7,7 @@ class HomeController < ApplicationController
       @recent_notes = current_user.notes.last(5)
       @user_notes = current_user.notes.last(5)
       @current_user = current_user
+      @guide_notes = Guide.all
     end
   end
 end
