@@ -225,6 +225,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  activesupport
   awesome_print
   bootsnap (>= 1.4.4)
   bootstrap-sass (~> 3.4.1)
