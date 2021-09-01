@@ -225,6 +225,11 @@ input:focus, .description-field:focus {
 .bi-eye, .bi-trash{
   color: black !important;
   padding: 0px;
+  opacity: 50%;
+}
+
+.bi-eye:hover, .bi-trash:hover{
+  opacity: 100%;
 }
 
 .bi-trash{
