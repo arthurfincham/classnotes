@@ -1,7 +1,7 @@
 <div class="note-show-container">
   <div class="note-show-box">
     <% if request.path.include? 'notes' %>
-    <h1>All Notes</h1>
+    <h1 class="table-title">All Notes</h1>
     <table class="table">
       <tr>
         <th><%= link_to "Date", :sort => "date DESC" %><i class="bi bi-arrow-down-up sort-arrows"></i></th>
@@ -12,7 +12,7 @@
       </tr>
 
       <% else %>
-      <h3>Recent Notes</h3>
+      <h3 class="table-title">Recent Notes</h3>
       <table class="table">
         <tr>
           <th>Date</th>
@@ -23,7 +23,7 @@
         <% end %>
         <% @user_notes.each do |note| %>
         <tr>
-          <td><%= note.date.to_formatted_s(:long) %></td>
+          <td><%= note.date.strftime("#{note.date.day.ordinalize} %B %Y") %></td>
           <td><%= note.title %></td>
           <td><%= note.instructor %></td>
           <td><%=  truncate(note.description, :length => 50, :separator => '') %></td>
