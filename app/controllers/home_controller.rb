@@ -6,6 +6,7 @@ class HomeController < ApplicationController
     if user_signed_in?
       @recent_notes = current_user.notes.last(5)
       @user_notes = current_user.notes.last(5)
+      @current_user = current_user
     end
   end
 end

@@ -1,4 +1,6 @@
 <div class="note-show-container animate__animated animate__bounceInLeft">
 <%= render "shared/welcomebar" %>
-<%= render "shared/noteindex" %>
+<% if current_user.notes.any? %>
+  <%= render "shared/noteindex" %>
+<% end %>
 </div>
