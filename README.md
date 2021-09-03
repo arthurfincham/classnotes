@@ -8,10 +8,11 @@ A simple, lightweight journal to accompany learning a sport such as Yoga or Jiu 
 ## Built with
 * [Bootstrap](https://getbootstrap.com) - framework for building responsive sites with extensive components.
 * [Animate.css](https://animate.style) - a library of ready-to-use, cross-browser animations for use in your web projects.
-* [Ruby on Rails](https://rubyonrails.org) - server-side web app framework written in Ruby. Key gems:
-  :gem: [devise](https://github.com/heartcombo/devise): authentication gem for Rails.
-  :gem: [pg](https://github.com/ged/ruby-pg): PostgreSQL gem for Rails.
-  :gem: [awesome_print](https://github.com/awesome-print/awesome_print): very helpful when working with the rails console.
+* [Ruby on Rails](https://rubyonrails.org) - server-side web app framework written in Ruby. 
+* Key gems:  
+  :gem: [devise](https://github.com/heartcombo/devise): authentication gem for Rails.  
+  :gem: [pg](https://github.com/ged/ruby-pg): PostgreSQL gem for Rails.  
+  :gem: [awesome_print](https://github.com/awesome-print/awesome_print): very helpful when working with the rails console.  
 * [Heroku](https://www.heroku.com) - service which allows developers to deploy applications.
 
 ## Usage
