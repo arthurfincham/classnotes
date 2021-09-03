@@ -1,8 +1,0 @@
-{
-  "favorites.resources": [
-    "config/routes.rb",
-    "app/controllers",
-    "app/models",
-    "app/views"
-  ]
-}
