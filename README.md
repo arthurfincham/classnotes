@@ -7,7 +7,7 @@
 A simple, lightweight journal to accompany learning a sport such as Yoga or Jiu Jitsu.
 ## Built with
 * [Bootstrap](https://getbootstrap.com) - framework for building responsive sites with extensive components.
-* [Animate.css](https://animate.style) - a library of ready-to-use, cross-browser animations for use in your web projects.
+* [Animate.css](https://animate.style) - a library of ready-to-use, cross-browser animations for your web projects.
 * [Ruby on Rails](https://rubyonrails.org) - server-side web app framework written in Ruby. 
 * Key gems:  
   :gem: [devise](https://github.com/heartcombo/devise): authentication gem for Rails.  
