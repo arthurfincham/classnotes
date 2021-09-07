@@ -11,6 +11,7 @@
       <% end %>
     </div>
   </div>
+
 <h3 class="top-tags">Top Tags</h3>
 <div id="tag_cloud">
       <% tag_cloud @tag_counts, %w[m] do |tag| %>
@@ -18,3 +19,4 @@
 }", tag_path(tag.name)%></span>
     <% end %>
     </div>
+

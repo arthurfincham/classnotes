@@ -58,6 +58,12 @@ h3{
   text-align: center;
 }
 
+@media (max-width:480px){
+  .sign-in-box{
+    width: 70vw;
+  }  
+}
+
 .sign-up-box{
   width: 40vw;
   max-width: 350px;
@@ -67,12 +73,28 @@ h3{
   font-size: 40px;
 }
 
+
+
+@media (max-width:480px){
+  .mobile-log-in-logo {
+    height: 160px !important;
+  }
+}
+
+
+
 .sign-in-wrapper{
   height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (max-width:480px){
+  .sign-in-wrapper{
+    height: 100vh;
+    width: 100vw;
+  }  
 }
 
 .navbar {
@@ -82,6 +104,28 @@ h3{
 
 .mt-2{
   padding-top: 15px;
+}
+
+@media (max-width:480px){
+  .mt-2 {
+    width: 100%;
+    font-size: 1.5em;
+  }
+}
+
+
+@media (max-width:480px){
+  .mobile-log-fields {
+    width: 100%;
+    height: 40px !important;
+    font-size: 1.5em !important;
+  }
+}
+
+@media (max-width:480px){
+  .note-show-box {
+    width: 90vw !important;
+  }
 }
 
 .note-show-container, .note-show-box, .note-edit-box{
@@ -376,6 +420,13 @@ td, th{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+@media (max-width:480px){
+  #tag_cloud {
+    width: 90vw !important;
+    max-width: 90vw !important;
+  }
 }
 
 #tag_cloud a {
