@@ -7,5 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+require 'csv'
 
-Note.create(user_id: "1", title: "No Gi", instructor: "Marcelo", date: "2021-08-11", description: "Amazing seminar today with Marcelo Garcia")
+list = []
+CSV.foreach("lib/seeds/bjjseeds.csv") do |row|
+ list << row
+end
+
+
+  list.each do |id, title, instructor, date, descrip|
+  puts Note.create(user_id: id, title: title, instructor: instructor, date: date, description: descrip)
+  end

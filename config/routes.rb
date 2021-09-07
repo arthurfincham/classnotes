@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:show, :edit, :update]
   resources :guides, only: [:show, :edit]
-  get 'home/index'  
+  get 'home/index'
   root to: "home#index"
   resources :notes
+  get 'tags/:tag', to: 'notes#index', as: :tag
 end

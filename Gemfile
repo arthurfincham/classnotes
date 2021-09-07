@@ -34,7 +34,7 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'
 gem 'jquery-rails'
 gem 'activesupport'
-
+gem 'acts-as-taggable-on', '~> 7.0'
 gem 'devise'
 gem 'travis'
 group :development, :test do

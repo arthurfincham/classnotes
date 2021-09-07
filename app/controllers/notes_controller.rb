@@ -2,8 +2,11 @@ class NotesController < ApplicationController
 
   def index
     @current_user = current_user
-    @notes = Note.all
-    @user_notes = current_user.notes.order(params[:sort])
+    if params[:tag]
+      @user_notes = current_user.notes.tagged_with(params[:tag]).order(params[:sort])
+    else
+      @user_notes = current_user.notes.order(params[:sort])
+    end
   end
 
   def new
@@ -30,7 +33,7 @@ class NotesController < ApplicationController
     @note = Note.find(params[:id])
     if @note.update(note_params)
      flash[:notice] = "Note was updated"
-     redirect_to note_path(@note)
+    #  redirect_to notes_path
     else
      flash[:notice] = "Note was not updated"
      render 'edit'
@@ -50,7 +53,7 @@ class NotesController < ApplicationController
 
   private
     def note_params
-     params.require(:note).permit(:user_id, :title, :date, :instructor, :description)
+     params.require(:note).permit(:user_id, :title, :date, :instructor, :description, :tag_list)
     end
 
 end
