@@ -1,0 +1,25 @@
+<div class="note-show-container">
+  <div class="note-show-box">
+    <h1 class="table-title"><%= link_to 'All Notes', notes_path, method: :get %></h1>
+    <div id="tag_cloud">
+      <% tag_cloud @user_notes.tag_counts.order("tags.name"), %w[m] do |tag| %>
+        <span class="badge badge-light"><%= link_to "#{tag.name.parameterize(separator: '_')
+}", tag_path(tag.name)%></span>
+    <% end %>
+    </div>
+    <table class="table table-hover">
+      <tr>
+        <th><%= link_to "Note", :sort => "date DESC" %><i class="bi bi-arrow-down-up sort-arrows"></i></th>
+        </th>
+        <th>Description</th>
+      </tr>
+          <% @user_notes.each do |note| %>
+          <tr class="row-index-hover">
+            <td><%= note.date.strftime("#{note.date.day.ordinalize} %b %y")%><br><strong><%= note.title %></strong><br><%= note.instructor %></td>
+            <td><%= link_to  "#{truncate(note.description, :length => 60, :separator => '')}", note_path(note) %></td>
+  </div>
+  </tr>
+  <% end %>
+  </table>
+</div>
+</div>
