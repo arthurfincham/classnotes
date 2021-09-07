@@ -397,3 +397,11 @@ td, th{
 .top-tags {
   margin: 2vh;
 }
+
+.row-index-hover:hover{
+  text-decoration: underline;
+}
+
+.row-index-hover > * > a {
+  color: black !important;
+}

@@ -6,7 +6,6 @@ class HomeController < ApplicationController
     if user_signed_in?
       @current_user = current_user
       @user_notes = current_user.notes.last(5)
-      @guide_notes = Guide.all
       @tag_counts = current_user.notes.tag_counts_on(:tags).limit(6)
     end
   end

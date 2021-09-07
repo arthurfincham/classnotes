@@ -7,7 +7,7 @@
 }", tag_path(tag.name)%></span>
     <% end %>
     </div>
-    <table class="table">
+    <table class="table table-hover">
       <tr>
         <th><%= link_to "Date", :sort => "date DESC" %><i class="bi bi-arrow-down-up sort-arrows"></i></th>
         <th><%= link_to "Title", :sort => "LOWER(title)" %><i class="bi bi-arrow-down-up sort-arrows"></i></th>
@@ -16,16 +16,11 @@
         <th>Description</th>
       </tr>
           <% @user_notes.each do |note| %>
-          <tr>
-            <td><%= note.date.strftime("#{note.date.day.ordinalize} %B %Y") %></td>
-            <td><%= note.title %></td>
-            <td><%= note.instructor %></td>
-            <td><%=  truncate(note.description, :length => 50, :separator => '') %></td>
-            <div class="note-index-buttons">
-              <td><%= link_to note, method: :get do %>
-                <i class="bi bi-eye" title="All Notes"></i>
-                <% end %></td>
-            </div>
+          <tr class="row-index-hover">
+            <td><%= link_to "#{note.date.strftime("#{note.date.day.ordinalize} %B %Y")}", note_path(note) %></td>
+            <td><%= link_to "#{note.title}", note_path(note) %></td>
+            <td><%= link_to "#{note.instructor}", note_path(note) %></td>
+            <td><%= link_to  "#{truncate(note.description, :length => 60, :separator => '')}", note_path(note) %></td>
   </div>
   </tr>
   <% end %>
