@@ -1,0 +1,44 @@
+<div class="note-show-container">
+  <div class="note-edit-box">
+    <%= render "shared/errornotes" %>
+    <div class="note-preview-container">
+
+      <div class="note-preview-box">
+        <div class="stat-card-custom">
+          <h2 class="note-preview-box-style"><%= @note.date.strftime("#{@note.date.day.ordinalize} %B %Y") %></h2>
+        </div>
+        <h2 class="note-preview-box-style"><%= @note.title %></h2>
+        <div class="stat-card-body">
+          <div id="tag_cloud">
+            <% tag_cloud @note.tag_counts.order("tags.name"), %w[m] do |tag| %>
+            <span
+              class="badge badge-light"><%= link_to "#{tag.name.parameterize(separator: '_')}", tag_path(tag.name)%></span>
+            <% end %>
+          </div>
+          <p>
+            <h3 class="note-preview-box-style"><%= @note.instructor %></h3>
+          </p>
+          <p class="note-show-text"><%= @note.description %></p>
+        </div>
+        <div class="note-show-buttons">
+            <% if @note.previous %>
+            <%= link_to @note.previous do %>
+            <i class="bi bi-arrow-left"></i>
+            <% end %>
+            <% end %>
+            <td><%= link_to edit_note_url(@note), method: :get do %>
+              <i class="bi bi-pencil-square edit-delete-buttons"></i>
+              <% end %></td>
+            <td><%= link_to note_path(@note), method: :delete, data: {confirm: "Are you sure?"} do %>
+              <i class="bi bi-trash edit-delete-buttons"></i>
+              <% end %></td>
+            <% if @note.next %>
+            <%= link_to @note.next do %>
+            <i class="bi bi-arrow-right"></i>
+            <% end %>
+            <% end %>
+          </div>
+
+        </div>
+      </div>
+    </div>

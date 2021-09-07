@@ -2,8 +2,9 @@
   <div class="note-show-box">
     <h1 class="table-title"><%= link_to 'All Notes', notes_path, method: :get %></h1>
     <div id="tag_cloud">
-      <% tag_cloud @user_notes.tag_counts, %w[m] do |tag| %>
-        <span class="badge badge-light"><%= link_to tag.name, tag_path(tag.name)%></span>
+      <% tag_cloud @user_notes.tag_counts.order("tags.name"), %w[m] do |tag| %>
+        <span class="badge badge-light"><%= link_to "#{tag.name.parameterize(separator: '_')
+}", tag_path(tag.name)%></span>
     <% end %>
     </div>
     <table class="table">
@@ -21,11 +22,8 @@
             <td><%= note.instructor %></td>
             <td><%=  truncate(note.description, :length => 50, :separator => '') %></td>
             <div class="note-index-buttons">
-              <td><%= link_to edit_note_url(note), method: :get do %>
+              <td><%= link_to note, method: :get do %>
                 <i class="bi bi-eye" title="All Notes"></i>
-                <% end %></td>
-              <td><%= link_to note_path(note), method: :delete, data: {confirm: "Are you sure?"} do %>
-                <i class="bi bi-trash"></i>
                 <% end %></td>
             </div>
   </div>

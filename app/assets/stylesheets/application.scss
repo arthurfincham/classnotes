@@ -91,6 +91,10 @@ h3{
   align-items: center;
 }
 
+.note-show-box{
+  width: 75vw;
+}
+
 .note-show-box, .note-edit-box{
   align-items: left;
 }
@@ -200,6 +204,11 @@ th > a{
   min-height: 100px;
   min-width: 350px;
   width: auto;
+}
+
+.note-show-text {
+  min-height: 100px;
+  width: 350px;
 }
 
 .stat-card-custom{
@@ -348,16 +357,19 @@ td, th{
 #tag_cloud {
   text-align: center;
   padding-bottom: 2vh;
-  max-width: 50vw;
+  max-width: 75vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 #tag_cloud a {
   text-decoration: none;
   color: black;
   font-size: 2em;
+  font-weight: normal;
+  font-style: italic;
 }
 
 #tag_cloud span {
@@ -367,3 +379,18 @@ td, th{
 #tag_cloud .badge:hover {
   background-color:rgb(207, 207, 207);
 }
+
+
+
+.note-show-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 350px;
+}
+
+.edit-delete-buttons {
+  font-size: 4em !important;
+}
+
