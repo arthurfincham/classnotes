@@ -231,8 +231,11 @@ input:focus, .description-field:focus {
   flex-direction: row;
 }
 
-.bi-eye, .bi-trash{
+.bi {
   color: black !important;
+}
+
+.bi-eye, .bi-trash{
   padding: 0px;
   opacity: 50%;
 }
@@ -388,10 +391,6 @@ td, th{
   align-items: center;
   justify-content: space-between;
   width: 350px;
-}
-
-.edit-delete-buttons {
-  font-size: 4em !important;
 }
 
 .top-tags {
