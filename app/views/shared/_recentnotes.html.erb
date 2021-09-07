@@ -1,0 +1,28 @@
+<div class="note-show-container">
+  <div class="note-show-box">
+    <h3 class="table-title"><%= link_to 'Recent Notes', notes_path, method: :get %></h3>
+    <table class="table">
+      <tr>
+        <th><%= link_to "Date", :sort => "date DESC" %><i class="bi bi-arrow-down-up sort-arrows"></i></th>
+        <th><%= link_to "Title", :sort => "LOWER(title)" %><i class="bi bi-arrow-down-up sort-arrows"></i></th>
+        <th><%= link_to "Instructor", :sort => "LOWER(instructor)" %><i class="bi bi-arrow-down-up sort-arrows"></i>
+        </th>
+        <th>Description</th>
+      </tr>
+          <% @user_notes.each do |note| %>
+          <tr>
+            <td><%= note.date.strftime("#{note.date.day.ordinalize} %B %Y") %></td>
+            <td><%= note.title %></td>
+            <td><%= note.instructor %></td>
+            <td><%=  truncate(note.description, :length => 50, :separator => '') %></td>
+            <div class="note-index-buttons">
+              <td><%= link_to note, method: :get do %>
+                <i class="bi bi-eye" title="All Notes"></i>
+                <% end %></td>
+            </div>
+  </div>
+  </tr>
+  <% end %>
+  </table>
+</div>
+</div>
