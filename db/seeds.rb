@@ -36,7 +36,7 @@ Note.create!([
   {title: "BJJ Fundamentals", date: "2020-10-16", instructor: "Bruno", description: "Takedown from behind. Arms wrapped around hips, elbow traps upper thigh and drive over. Trap shoulders with knee. Finish with Ezekiel.", user_id: 1, tag_list: nil},
   {title: "BJJ All Levels", date: "2020-10-17", instructor: "Kywan", description: "Open guard, control one arm. Pull across, climb up the arm and take the back. Trap leg with elbow and drive into ground.", user_id: 1, tag_list: nil}
 ])
-
+x
 User.create!([
   {email: "arthur@example.com", encrypted_password: "$2a$12$Td6E4O9LAx2b27BGDIhrXOJw.GRUK9IOATkizpphB8Riu99ZHeDQy", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, training_since: "2018-10-25", name: "Arthur", belt: nil, guest: nil},
   {email: "max@example.com", encrypted_password: "$2a$12$3h1X05Vgw02zikuKC/9bqO4tMviv59jGySwOc0B22EcGnju1z6bL.", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, training_since: nil, name: "Max", belt: nil, guest: nil},
