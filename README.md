@@ -12,6 +12,7 @@ A simple, lightweight journal to accompany learning a sport such as Yoga or Jiu 
 * Key gems:  
   :gem: [devise](https://github.com/heartcombo/devise): authentication gem for Rails.  
   :gem: [pg](https://github.com/ged/ruby-pg): PostgreSQL gem for Rails.  
+  :gem: [acts-as-taggable-on](https://github.com/mbleigh/acts-as-taggable-on): gem for tagging models in Rails.
   :gem: [awesome_print](https://github.com/awesome-print/awesome_print): very helpful when working with the rails console.  
 * [Heroku](https://www.heroku.com) - service which allows developers to deploy applications.
 
