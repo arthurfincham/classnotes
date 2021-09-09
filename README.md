@@ -5,6 +5,8 @@
 
 ## :bulb: Overview
 One of my hobbies is Brazilian Jiu Jitsu, a martial art which depends on the accumilation of knowledge and skill. A problem, however, is how to keep track of all this knowledge. Enter Classnotes: a simple, lightweight journal to accompany learning. The idea is that after class you can write down what you learned, tag it, and then build a repository of techniques and ideas that can be quickly accessed.
+## :eye: Preview 
+![](app/assets/gifs/cn_display_gif.gif)
 ## :hammer: Built with
 * [Bootstrap](https://getbootstrap.com) - framework for building responsive sites with extensive components.
 * [Animate.css](https://animate.style) - a library of ready-to-use, cross-browser animations for your web projects.
