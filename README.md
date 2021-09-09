@@ -3,19 +3,18 @@
 ![](https://img.shields.io/github/languages/count/arthurfincham/loginapp)
 ![](https://img.shields.io/github/languages/code-size/arthurfincham/loginapp)
 
-## Overview
-A simple, lightweight journal to accompany learning a sport such as Yoga or Jiu Jitsu.
-## Built with
+## :bulb: Overview
+One of my hobbies is Brazilian Jiu Jitsu, a martial art which depends on the accumilation of knowledge and skill. A problem, however, is how to keep track of all this knowledge. Enter Classnotes: a simple, lightweight journal to accompany learning. The idea is that after class you can write down what you learned, tag it, and then build a repository of techniques and ideas that can be quickly accessed.
+## :hammer: Built with
 * [Bootstrap](https://getbootstrap.com) - framework for building responsive sites with extensive components.
 * [Animate.css](https://animate.style) - a library of ready-to-use, cross-browser animations for your web projects.
 * [Ruby on Rails](https://rubyonrails.org) - server-side web app framework written in Ruby. 
-* Key gems:  
-  :gem: [devise](https://github.com/heartcombo/devise): authentication gem for Rails.  
-  :gem: [pg](https://github.com/ged/ruby-pg): PostgreSQL gem for Rails.  
-  :gem: [acts-as-taggable-on](https://github.com/mbleigh/acts-as-taggable-on): gem for tagging models in Rails.
-  :gem: [awesome_print](https://github.com/awesome-print/awesome_print): very helpful when working with the rails console.  
 * [Heroku](https://www.heroku.com) - service which allows developers to deploy applications.
-
+## :gem: Key Gems 
+* [devise](https://github.com/heartcombo/devise): authentication gem for Rails.  
+* [pg](https://github.com/ged/ruby-pg): PostgreSQL gem for Rails.  
+* [acts-as-taggable-on](https://github.com/mbleigh/acts-as-taggable-on): gem for tagging models in Rails.
+* [awesome_print](https://github.com/awesome-print/awesome_print): very helpful when working with the rails console.  
 ## Usage
 ##### Clone the repo
 ```git clone https://github.com/arthurfincham/loginapp.git```
@@ -32,7 +31,7 @@ A simple, lightweight journal to accompany learning a sport such as Yoga or Jiu 
 % bundle exec rails server
 ```
 ##### Please note:
-The current release is built with [PostgreSQL](https://postgresapp.com) for compatibility with [Heroku](https://www.heroku.com). If you are unfamiliar with Postgres, [SQLite3](https://www.sqlite.org/index.html) is a great alternative. In the **Gemfile**, change the following line:
+The current release is built with [PostgreSQL](https://postgresapp.com) for compatibility with [Heroku](https://www.heroku.com). If you are unfamiliar with Postgres, [SQLite3](https://www.sqlite.org/index.html)* is a great alternative. In the **Gemfile**, change the following line:
 ``` ruby
 gem 'pg'
 ```
@@ -44,18 +43,4 @@ and then run
 ``` bash
 bundle install
 ```
-
-## Site
-##### User Authentication
-![](app/assets/images/cn_log_in.png)
----
-##### Welcome and Instructions
-![](app/assets/images/cn_welcome.png)
----
-##### Write Note
-![](app/assets/images/cn_new_note.png)
----
-##### All Notes
-![](app/assets/images/cn_all_notes.png)
-
-
+\* *SQLite3 will not work for deployment with Heroku.*
