@@ -1,8 +1,14 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   helper_method :mobile?
+  before_action :log_partial_events
 
-   
+  def log_partial_events
+    @partial_events = []
+    ActiveSupport::Notifications.subscribe("render_partial.action_view") do |event_name, start_at, end_at, id, payload|
+    @partial_events << payload[:identifier]
+  end
+end
 
 def after_sign_in_path_for(resource_or_scope)
   home_index_path

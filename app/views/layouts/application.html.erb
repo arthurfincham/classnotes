@@ -24,7 +24,16 @@
   <% end %>
 
   <main>
-    <%= yield %>
+  <div class="routing-master">
+    <p><strong>Controller: </strong><%= controller_name %></p>
+    <p><strong>Action: </strong><%= action_name %></p>
+    <p><strong>Path: </strong><%= request.fullpath %></p>
+    <p><strong>Partials: </strong><p>
+    <% @partial_events.map do |x| %>
+      <p><%= x.remove "/Users/arthurfincham/dev/personal/loginapp/app/views/shared/" %></p>
+    <% end %>
+  </div>
+  <%= yield %>
   </main>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
