@@ -25,12 +25,12 @@
 
   <main>
   <div class="routing-master">
-    <p><strong>Controller: </strong><%= controller_name %></p>
-    <p><strong>Action: </strong><%= action_name %></p>
-    <p><strong>Path: </strong><%= request.fullpath %></p>
-    <p><strong>Partials: </strong><p>
+    <p>Controller: <strong><%= controller_name %></strong></p>
+    <p>Action: <strong><%= action_name %></strong></p>
+    <p>Path: <strong><%= request.fullpath %></strong></p>
+    <p>Partials: <p>
     <% @partial_events.map do |x| %>
-      <p><%= x.remove "/Users/arthurfincham/dev/personal/loginapp/app/views/shared/" %></p>
+      <p><strong><%= x.remove "/Users/arthurfincham/dev/personal/loginapp/app" %></strong></p>
     <% end %>
   </div>
   <%= yield %>

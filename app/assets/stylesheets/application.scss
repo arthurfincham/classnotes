@@ -475,10 +475,11 @@ td, th{
 }
 
 .routing-master {
-  border: 1px solid black;
-  position: absolute;
+  border: 1px solid red;
+  position: fixed;
   bottom: 0;
   left: 0;
-  background-color: rgb(247, 247, 205);
+  background-color: rgba(247, 247, 205, 0.3);
   padding: 10px;
+  line-height: 7px;
 }
