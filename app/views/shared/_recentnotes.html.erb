@@ -18,7 +18,7 @@
       </tr>
     <% end %>
     <% if mobile? %>
-          <% @user_notes.each do |note| %>
+          <% current_user.notes.last(5).each do |note| %>
           <tr class="row-index-hover">
             <td><%= note.date.strftime("#{note.date.day.ordinalize} %b %y")%><br><strong><%= note.title %></strong><br><%= note.instructor %></td>
             <td><%= link_to  "#{truncate(note.description, :length => 60, :separator => '')}", note_path(note) %></td>
@@ -26,7 +26,7 @@
   </tr>
   <% end %>
   <% else %>
-  <% @user_notes.each do |note| %>
+  <% current_user.notes.last(5).each do |note| %>
           <tr class="row-index-hover">
             <td><%= link_to "#{note.date.strftime("#{note.date.day.ordinalize} %B %Y")}", note_path(note) %></td>
             <td><%= link_to "#{note.title}", note_path(note) %></td>
