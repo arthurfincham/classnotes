@@ -14,7 +14,7 @@
 
 <h3 class="top-tags">Top Tags</h3>
 <div id="tag_cloud">
-      <% tag_cloud @tag_counts, %w[m] do |tag| %>
+      <% tag_cloud current_user.notes.tag_counts_on(:tags).limit(6), %w[m] do |tag| %>
         <span class="badge badge-light"><%= link_to "#{tag.name.parameterize(separator: '_')
 }", tag_path(tag.name)%></span>
     <% end %>
