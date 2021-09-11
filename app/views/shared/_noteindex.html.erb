@@ -3,9 +3,9 @@
     <h1 class="table-title"><%= link_to 'All Notes', notes_path, method: :get %></h1>
     <div id="tag_cloud">
       <% tag_cloud @user_notes.tag_counts.order("tags.name"), %w[m] do |tag| %>
-        <span class="badge badge-light"><%= link_to "#{tag.name.parameterize(separator: '_')
+      <span class="badge badge-light"><%= link_to "#{tag.name.parameterize(separator: '_')
 }", tag_path(tag.name)%></span>
-    <% end %>
+      <% end %>
     </div>
     <table class="table table-hover">
       <tr>
@@ -15,12 +15,12 @@
         </th>
         <th>Description</th>
       </tr>
-          <% @user_notes.each do |note| %>
-          <tr class="row-index-hover">
-            <td><%= link_to "#{note.date.strftime("#{note.date.day.ordinalize} %B %Y")}", note_path(note) %></td>
-            <td><%= link_to "#{note.title}", note_path(note) %></td>
-            <td><%= link_to "#{note.instructor}", note_path(note) %></td>
-            <td><%= link_to  "#{truncate(note.description, :length => 60, :separator => '')}", note_path(note) %></td>
+      <% @user_notes.each do |note| %>
+      <tr class="row-index-hover">
+        <td><%= link_to "#{note.date.strftime("#{note.date.day.ordinalize} %B %Y")}", note_path(note) %></td>
+        <td><%= link_to "#{note.title}", note_path(note) %></td>
+        <td><%= link_to "#{note.instructor}", note_path(note) %></td>
+        <td><%= link_to  "#{truncate(note.description, :length => 60, :separator => '')}", note_path(note) %></td>
   </div>
   </tr>
   <% end %>
