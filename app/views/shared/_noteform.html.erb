@@ -26,12 +26,12 @@
         </div>
 
         <td><%= link_to note_path(@note), method: :get do %>
-                <i class="bi bi-eye" title="All Notes"></i>
-                <% end %></td>
+          <i class="bi bi-eye" title="All Notes"></i>
+          <% end %></td>
 
         <td><%= link_to note_path(@note), method: :delete, data: {confirm: "Are you sure?"} do %>
-                <i class="bi bi-trash"></i>
-                <% end %></td>
+          <i class="bi bi-trash"></i>
+          <% end %></td>
       </div>
     </div>
 

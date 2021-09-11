@@ -2,40 +2,42 @@
   <div class="note-show-box">
     <h1 class="table-title"><%= link_to 'Recent Notes', notes_path, method: :get %></h1>
     <table class="table table-hover">
-    <% if mobile?%>
+      <% if mobile?%>
       <tr>
         <th><%= link_to "Note", :sort => "date DESC" %><i class="bi bi-arrow-down-up sort-arrows"></i></th>
         </th>
         <th>Description</th>
       </tr>
-    <% else %>
-    <tr>
+      <% else %>
+      <tr>
         <th><%= link_to "Date", :sort => "date DESC" %><i class="bi bi-arrow-down-up sort-arrows"></i></th>
         <th><%= link_to "Title", :sort => "LOWER(title)" %><i class="bi bi-arrow-down-up sort-arrows"></i></th>
         <th><%= link_to "Instructor", :sort => "LOWER(instructor)" %><i class="bi bi-arrow-down-up sort-arrows"></i>
         </th>
         <th>Description</th>
       </tr>
-    <% end %>
-    <% if mobile? %>
-          <% current_user.notes.last(5).each do |note| %>
-          <tr class="row-index-hover">
-            <td><%= note.date.strftime("#{note.date.day.ordinalize} %b %y")%><br><strong><%= note.title %></strong><br><%= note.instructor %></td>
-            <td><%= link_to  "#{truncate(note.description, :length => 60, :separator => '')}", note_path(note) %></td>
+      <% end %>
+      <% if mobile? %>
+      <% current_user.notes.last(5).each do |note| %>
+      <tr class="row-index-hover">
+        <td>
+          <%= note.date.strftime("#{note.date.day.ordinalize} %b %y")%><br><strong><%= note.title %></strong><br><%= note.instructor %>
+        </td>
+        <td><%= link_to  "#{truncate(note.description, :length => 60, :separator => '')}", note_path(note) %></td>
   </div>
   </tr>
   <% end %>
   <% else %>
   <% current_user.notes.last(5).each do |note| %>
-          <tr class="row-index-hover">
-            <td><%= link_to "#{note.date.strftime("#{note.date.day.ordinalize} %B %Y")}", note_path(note) %></td>
-            <td><%= link_to "#{note.title}", note_path(note) %></td>
-            <td><%= link_to "#{note.instructor}", note_path(note) %></td>
-            <td><%= link_to  "#{truncate(note.description, :length => 60, :separator => '')}", note_path(note) %></td>
-  </div>
-  </tr>
-  <% end %>
-  <% end %>
-  </table>
+  <tr class="row-index-hover">
+    <td><%= link_to "#{note.date.strftime("#{note.date.day.ordinalize} %B %Y")}", note_path(note) %></td>
+    <td><%= link_to "#{note.title}", note_path(note) %></td>
+    <td><%= link_to "#{note.instructor}", note_path(note) %></td>
+    <td><%= link_to  "#{truncate(note.description, :length => 60, :separator => '')}", note_path(note) %></td>
+</div>
+</tr>
+<% end %>
+<% end %>
+</table>
 </div>
 </div>
